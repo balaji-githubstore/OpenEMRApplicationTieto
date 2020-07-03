@@ -3,7 +3,7 @@
 <suite name="OpenEMR Suite">
 	<parameter name="browser" value="ch"></parameter>
 	<test thread-count="5" name="Login Test ch">
-		<parameter name="browser" value="ch"></parameter>
+		<parameter name="browser" value="ff"></parameter>
 		<classes>
 			<class name="com.tieto.test.LoginTest">
 				<methods>

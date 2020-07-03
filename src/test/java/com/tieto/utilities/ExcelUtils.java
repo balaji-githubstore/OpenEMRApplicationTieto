@@ -10,32 +10,38 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
-	
-	public static Object[][] getSheetIntoObject(String fileDetail,String sheetName) throws IOException {
 
-		FileInputStream file = new FileInputStream(fileDetail);
-		XSSFWorkbook book = new XSSFWorkbook(file);
-		XSSFSheet sheet = book.getSheet(sheetName);
+	public static Object[][] getSheetIntoObject(String fileDetail, String sheetName) throws IOException {
 
-		int rowCount=sheet.getPhysicalNumberOfRows();		
-		int cellCount = sheet.getRow(0).getPhysicalNumberOfCells();
-		Object[][] main =new Object[rowCount-1][cellCount];
-		
-		DataFormatter format = new DataFormatter();	
-		for(int r=1;r<rowCount;r++)
-		{
-			XSSFRow row = sheet.getRow(r);	
-			for(int c=0;c<cellCount;c++)
-			{
-				XSSFCell cell = row.getCell(c);	
-				String cellValue= format.formatCellValue(cell);				
-				main[r-1][c]=cellValue;
+		FileInputStream file = null;
+		XSSFWorkbook book = null;
+		Object[][] main = null;
+		try {
+			file = new FileInputStream(fileDetail);
+			book = new XSSFWorkbook(file);
+			XSSFSheet sheet = book.getSheet(sheetName);
+
+			int rowCount = sheet.getPhysicalNumberOfRows();
+			int cellCount = sheet.getRow(0).getPhysicalNumberOfCells();
+			main = new Object[rowCount - 1][cellCount];
+
+			DataFormatter format = new DataFormatter();
+			for (int r = 1; r < rowCount; r++) {
+				XSSFRow row = sheet.getRow(r);
+				for (int c = 0; c < cellCount; c++) {
+					XSSFCell cell = row.getCell(c);
+					String cellValue = format.formatCellValue(cell);
+					main[r - 1][c] = cellValue;
+				}
 			}
-		}	
-		book.close();
-		file.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			book.close();
+			file.close();
+		}
+
 		return main;
 	}
-
 
 }
