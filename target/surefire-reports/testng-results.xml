@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="OpenEMR Suite" duration-ms="12299" started-at="2020-07-03T16:39:11 IST" finished-at="2020-07-03T16:39:23 IST">
+    <groups>
+    </groups>
+    <test name="Login Test ch" duration-ms="12299" started-at="2020-07-03T16:39:11 IST" finished-at="2020-07-03T16:39:23 IST">
+      <class name="com.tieto.test.LoginTest">
+        <test-method status="PASS" signature="init(java.lang.String)[pri:0, instance:com.tieto.test.LoginTest@56235b8e]" name="init" is-config="true" duration-ms="11515" started-at="2020-07-03T16:39:11 IST" finished-at="2020-07-03T16:39:22 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ch]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="checkLinkCountTest()[pri:0, instance:com.tieto.test.LoginTest@56235b8e]" name="checkLinkCountTest" duration-ms="48" started-at="2020-07-03T16:39:22 IST" finished-at="2020-07-03T16:39:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLinkCountTest -->
+        <test-method status="PASS" signature="end()[pri:0, instance:com.tieto.test.LoginTest@56235b8e]" name="end" is-config="true" duration-ms="676" started-at="2020-07-03T16:39:22 IST" finished-at="2020-07-03T16:39:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- com.tieto.test.LoginTest -->
+    </test> <!-- Login Test ch -->
+  </suite> <!-- OpenEMR Suite -->
+</testng-results>

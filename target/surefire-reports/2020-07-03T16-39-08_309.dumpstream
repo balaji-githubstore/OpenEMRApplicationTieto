@@ -1,0 +1,4 @@
+# Created at 2020-07-03T16:39:09.394
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Mine\Company\Tieto\JavaSelenium\OpenEMRApplication\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+

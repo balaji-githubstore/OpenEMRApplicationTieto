@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OpenEMR Suite">
+	<parameter name="browser" value="ff"></parameter>
+	<test thread-count="5" name="Login Test ch">
+		<parameter name="browser" value="ch"></parameter>
+		<classes>
+			<class name="com.tieto.test.LoginTest">
+				<methods>
+					<include name="checkLinkCountTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Login Test -->
+
+</suite> <!-- OpenEMR Suite -->
